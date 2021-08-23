@@ -4,6 +4,7 @@ const searchHandler = async (req, res) => {
     // Get the request query
     // Add query to API parameters
 
+    // console.log(req.query);
     const query = req.query.term;
 
     const searchResults = await axios.get(
@@ -23,6 +24,7 @@ const searchHandler = async (req, res) => {
             title: result.webTitle,
             url: result.webUrl,
             image: result.fields.thumbnail,
+            date: result.webPublicationDate,
         };
     });
 

@@ -10,7 +10,9 @@ const Search = ({ term, setTerm, doSearch }) => {
                     onChange={(evt) => setTerm(evt.target.value)}
                     placeholder="Seach a term i.e. sport"
                 />
-                <button onClick={() => doSearch()}>Search</button>
+                <button disabled={!term} onClick={() => doSearch()}>
+                    Search
+                </button>
             </div>
         </div>
     );

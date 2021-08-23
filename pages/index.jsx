@@ -8,6 +8,8 @@ const IndexPage = () => {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    console.log(results);
+
     const doSearch = async () => {
         try {
             if (term) {
